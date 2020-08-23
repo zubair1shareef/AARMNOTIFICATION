@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/picture"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            app:srcCompat="@drawable/ic_launcher_foreground"
+            tools:ignore="VectorDrawableCompat" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="319dp"
+            android:layout_height="65dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/textfield"
+            android:drawableLeft="@android:drawable/sym_action_email"
+            android:ems="10"
+            android:hint="enter email"
+            android:inputType="textPersonName"
+            android:paddingLeft="20dp" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="318dp"
+            android:layout_height="65dp"
+
+            android:layout_marginLeft="50dp"
+
+            android:background="@drawable/textfield"
+            android:drawableLeft="@android:drawable/ic_lock_idle_lock"
+            android:ems="10"
+            android:hint="enter password"
+            android:inputType="textPassword"
+            android:paddingLeft="20dp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="276dp"
+            android:layout_height="151dp"
+            android:layout_marginLeft="70dp"
+            android:background="@drawable/button"
+            android:onClick="open"
+            android:text="login" />
+
+
+
+
+    </LinearLayout>
+</RelativeLayout>
