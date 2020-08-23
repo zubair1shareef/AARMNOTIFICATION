@@ -13,7 +13,7 @@
         android:layout_marginStart="1dp"
         android:layout_marginLeft="1dp"
         android:layout_marginTop="1dp"
-        android:background="@drawable/picture"
+        android:background="@drawable/backaarm"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -61,8 +61,6 @@
             android:background="@drawable/button"
             android:onClick="open"
             android:text="login" />
-
-
 
 
     </LinearLayout>

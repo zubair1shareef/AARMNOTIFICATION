@@ -17,6 +17,8 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class Viewnotication extends AppCompatActivity {
     DatabaseReference ref;
+
+    private LinearLayoutManager mLayoutManager;
     private FirebaseRecyclerOptions<model> option;
     private FirebaseRecyclerAdapter<model,Cardviewholder> adapter;
     RecyclerView recyclerView;
@@ -26,9 +28,18 @@ public class Viewnotication extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_viewnotication);
         recyclerView=findViewById(R.id.recylerview1);
-        recyclerView.setHasFixedSize(true);
+        mLayoutManager = new LinearLayoutManager(Viewnotication.this);
+        mLayoutManager.setReverseLayout(true);
+        mLayoutManager.setStackFromEnd(true);
+
+        // Now set the layout manager and the adapter to the RecyclerView
+        recyclerView.setLayoutManager(mLayoutManager);
+        recyclerView.setAdapter(adapter);
+
+        //recyclerView.setHasFixedSize(true);
+
         ref= FirebaseDatabase.getInstance().getReference().child("Class");
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        //recyclerView.setLayoutManager(new LinearLayoutManager(this));
         option=new FirebaseRecyclerOptions.Builder<model>().setQuery(ref,model.class).build();
         adapter=new FirebaseRecyclerAdapter<model, Cardviewholder>(option) {
             @Override
