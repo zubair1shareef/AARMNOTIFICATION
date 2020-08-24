@@ -2,6 +2,7 @@ package com.example.aarmnotification;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -9,6 +10,9 @@ import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Addnotification extends AppCompatActivity {
     EditText deptclass,totalstudent,classtime,topic,comment;
@@ -28,10 +32,16 @@ public class Addnotification extends AppCompatActivity {
     {    FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("Class");
 
+        //date
+        java.util.Date today = new Date();
+        SimpleDateFormat format = new SimpleDateFormat("yy-MM-dd hh:mm:ss a");
+        String dateToStr = format.format(today);
+        //
+
         Name="name here";
         Dept=deptclass.getText().toString();
         Totalstduent=totalstudent.getText().toString();
-        Date="datehere";
+        Date=dateToStr;
         Classtime=classtime.getText().toString();
         Topic=topic.getText().toString();
         Comment=comment.getText().toString();
@@ -40,4 +50,5 @@ public class Addnotification extends AppCompatActivity {
         String key = myRef.push().getKey();
         myRef.child(key).setValue(data);
     }
+
 }

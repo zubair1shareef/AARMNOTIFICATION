@@ -5,10 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -39,6 +41,8 @@ public class Viewnotication extends AppCompatActivity {
         //recyclerView.setHasFixedSize(true);
 
         ref= FirebaseDatabase.getInstance().getReference().child("Class");
+        Toast.makeText(Viewnotication.this, "Loading",
+                Toast.LENGTH_SHORT).show();
         //recyclerView.setLayoutManager(new LinearLayoutManager(this));
         option=new FirebaseRecyclerOptions.Builder<model>().setQuery(ref,model.class).build();
         adapter=new FirebaseRecyclerAdapter<model, Cardviewholder>(option) {
@@ -64,5 +68,10 @@ public class Viewnotication extends AppCompatActivity {
         };
         adapter.startListening();
         recyclerView.setAdapter(adapter);
+    }
+    public void add(View v)
+    {
+        Intent intent=new Intent(Viewnotication.this,Addnotification.class);
+        startActivity(intent);
     }
 }
