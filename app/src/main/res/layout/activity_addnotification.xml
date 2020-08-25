@@ -4,54 +4,66 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingHorizontal="30dp"
+    android:background="@drawable/backaarm3"
     android:orientation="vertical"
+    android:paddingHorizontal="30dp"
     tools:context=".Addnotification">
+
     <EditText
-        android:layout_marginTop="150dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/dept_class"
-        android:hint="enter dept sem and year"
-        />
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="150dp"
+        android:paddingLeft="15dp"
+        android:background="@drawable/textfield"
+        android:hint="enter dept sem and year" />
+
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/total_student"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:paddingLeft="15dp"
 
         android:layout_marginTop="10dp"
 
-        android:hint="total student"
-        />
+        android:background="@drawable/textfield"
+        android:hint="total student" />
+
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/class_time"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:paddingLeft="15dp"
         android:layout_marginTop="10dp"
-        android:hint="class time"
-        />
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:id="@+id/subject_topic"
-        android:hint="subject and topic"
-        />
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/comment_"
-        android:layout_marginTop="10dp"
-        android:hint="enter comment here"
+        android:background="@drawable/textfield"
+        android:hint="class time" />
 
-        />
+    <EditText
+        android:id="@+id/subject_topic"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:paddingLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/textfield"
+        android:hint="subject and topic" />
+
+    <EditText
+        android:id="@+id/comment_"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:paddingLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/textfield"
+
+        android:hint="enter comment here" />
 
     <Button
         android:id="@+id/submit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="234dp"
+        android:layout_height="109dp"
 
         android:layout_marginTop="30dp"
+        android:background="@drawable/button"
         android:onClick="submit"
         android:text="submmit" />
 

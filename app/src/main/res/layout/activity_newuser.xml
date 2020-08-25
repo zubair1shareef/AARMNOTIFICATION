@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/signupback3"
+    android:orientation="vertical"
+    tools:context=".Newuser">
+
+    <EditText
+        android:id="@+id/email_us"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/textfield"
+        android:hint="enter email id"
+        android:paddingLeft="15dp" />
+
+    <EditText
+        android:id="@+id/name_us"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/textfield"
+        android:hint="enter full name"
+        android:paddingLeft="15dp" />
+
+    <EditText
+        android:id="@+id/idno_us"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/textfield"
+        android:hint="enter id no"
+        android:paddingLeft="15dp" />
+
+    <EditText
+        android:id="@+id/dept_us"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/textfield"
+        android:hint="enter dept"
+        android:paddingLeft="15dp"
+
+        />
+
+    <EditText
+        android:id="@+id/passwor1_us"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/textfield"
+        android:hint="enter password"
+        android:paddingLeft="15dp" />
+
+    <EditText
+        android:id="@+id/passwor2_us"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/textfield"
+        android:hint="reenter password"
+        android:paddingLeft="15dp" />
+
+    <Button
+        android:id="@+id/create_us"
+        android:layout_width="272dp"
+        android:layout_height="117dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button"
+        android:onClick="create"
+        android:text="create account" />
+</LinearLayout>

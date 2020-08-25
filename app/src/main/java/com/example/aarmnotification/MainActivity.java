@@ -3,12 +3,14 @@ package com.example.aarmnotification;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -21,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     EditText Email,Password;
     private FirebaseAuth mAuth;
     Button Login;
+    TextView newact;
 
 
     @Override
@@ -31,6 +34,9 @@ public class MainActivity extends AppCompatActivity {
         Password=(EditText) findViewById(R.id.password);
 
         Login=(Button)findViewById(R.id.login);
+        newact=(TextView) findViewById(R.id.newaccount);
+
+
 
 
     }
@@ -41,15 +47,20 @@ public class MainActivity extends AppCompatActivity {
        email=Email.getText().toString().trim();
        password=Password.getText().toString().trim();
 
-       if(email.isEmpty()||password.isEmpty())
+
+
+
+      if(email.isEmpty()||password.isEmpty())
        {
            Toast.makeText(MainActivity.this, "Enter email and password",
                    Toast.LENGTH_SHORT).show();
 
        }
-       else
-       {
 
+      else
+       {final ProgressDialog progDailog = ProgressDialog.show(this,
+               "Signing in",
+               "....please wait....", true);
 
            mAuth.signInWithEmailAndPassword(email, password)
                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -57,12 +68,28 @@ public class MainActivity extends AppCompatActivity {
                        public void onComplete(@NonNull Task<AuthResult> task) {
                            if (task.isSuccessful()) {
                                // Sign in success, update UI with the signed-in user's information
+                               FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                               boolean emailVerified;
+                               FirebaseUser userr = mAuth.getCurrentUser();
 
-                               FirebaseUser user = mAuth.getCurrentUser();
-                               Intent intent=new Intent(MainActivity.this,Viewnotication.class);
-                               startActivity(intent);
+                               if ( emailVerified = userr.isEmailVerified())
+                               { progDailog.dismiss();
+
+                                   Intent intent=new Intent(MainActivity.this,Viewnotication.class);
+                                   startActivity(intent);
+
+                               }
+                               else
+                               { progDailog.dismiss();
+                                   Toast.makeText(MainActivity.this, "please verify your email",
+                                           Toast.LENGTH_SHORT).show();
+                               }
+
+
+
 
                            } else {
+                               progDailog.dismiss();
                                // If sign in fails, display a message to the user.
 
                                Toast.makeText(MainActivity.this, "Authentication failed.",
@@ -78,10 +105,22 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+
+
+
        }
 
 
 
 
+
+
+
+    }
+    public void newcreate(View v)
+    {
+        Intent intent=new Intent(MainActivity.this,Newuser.class);
+        startActivity(intent);
     }
 }

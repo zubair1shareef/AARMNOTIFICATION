@@ -71,6 +71,8 @@
             android:text="click here to create account"
             android:textColor="@android:color/holo_red_dark"
            android:lastBaselineToBottomHeight="10dp"
+            android:onClick="newcreate"
+            android:id="@+id/newaccount"
             android:textSize="17dp" />
 
 

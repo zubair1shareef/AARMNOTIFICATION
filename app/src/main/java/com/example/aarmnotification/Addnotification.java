@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -37,8 +39,9 @@ public class Addnotification extends AppCompatActivity {
         SimpleDateFormat format = new SimpleDateFormat("yy-MM-dd hh:mm:ss a");
         String dateToStr = format.format(today);
         //
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
-        Name="name here";
+        Name=user.getDisplayName();
         Dept=deptclass.getText().toString();
         Totalstduent=totalstudent.getText().toString();
         Date=dateToStr;
@@ -49,6 +52,9 @@ public class Addnotification extends AppCompatActivity {
         Data_adapter data=new Data_adapter(Name,Dept,Date,Totalstduent,Classtime,Topic,Comment);
         String key = myRef.push().getKey();
         myRef.child(key).setValue(data);
+
+        Intent intentt=new Intent(Addnotification.this,Viewnotication.class);
+        startActivity(intentt);
     }
 
 }
