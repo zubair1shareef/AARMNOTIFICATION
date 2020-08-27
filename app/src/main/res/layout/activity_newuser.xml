@@ -14,7 +14,8 @@
         android:layout_height="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="150dp"
-        android:background="@drawable/textfield"
+
+        android:background="@drawable/textf"
         android:hint="enter email id"
         android:paddingLeft="15dp" />
 
@@ -24,7 +25,8 @@
         android:layout_height="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/textfield"
+        android:background="@drawable/textf"
+
         android:hint="enter full name"
         android:paddingLeft="15dp" />
 
@@ -34,7 +36,8 @@
         android:layout_height="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/textfield"
+        android:background="@drawable/textf"
+
         android:hint="enter id no"
         android:paddingLeft="15dp" />
 
@@ -44,7 +47,8 @@
         android:layout_height="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/textfield"
+        android:background="@drawable/textf"
+
         android:hint="enter dept"
         android:paddingLeft="15dp"
 
@@ -56,7 +60,8 @@
         android:layout_height="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/textfield"
+        android:background="@drawable/textf"
+
         android:hint="enter password"
         android:paddingLeft="15dp" />
 
@@ -66,17 +71,18 @@
         android:layout_height="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/textfield"
+        android:background="@drawable/textf"
+
         android:hint="reenter password"
         android:paddingLeft="15dp" />
 
     <Button
         android:id="@+id/create_us"
-        android:layout_width="272dp"
-        android:layout_height="117dp"
+        android:layout_width="204dp"
+        android:layout_height="54dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/button"
+        android:background="@android:drawable/button_onoff_indicator_on"
         android:onClick="create"
         android:text="create account" />
 </LinearLayout>

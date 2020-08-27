@@ -12,40 +12,40 @@
     <EditText
         android:id="@+id/dept_class"
         android:layout_width="300dp"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
+        android:background="@drawable/textf"
         android:layout_marginTop="150dp"
         android:paddingLeft="15dp"
-        android:background="@drawable/textfield"
-        android:hint="enter dept sem and year" />
+       android:hint="enter dept sem and year" />
 
     <EditText
         android:id="@+id/total_student"
         android:layout_width="300dp"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
+        android:background="@drawable/textf"
         android:paddingLeft="15dp"
 
         android:layout_marginTop="10dp"
 
-        android:background="@drawable/textfield"
-        android:hint="total student" />
+       android:hint="total student" />
 
     <EditText
         android:id="@+id/class_time"
         android:layout_width="300dp"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
+        android:background="@drawable/textf"
         android:paddingLeft="15dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/textfield"
-        android:hint="class time" />
+       android:hint="class time" />
 
     <EditText
         android:id="@+id/subject_topic"
         android:layout_width="300dp"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:paddingLeft="15dp"
+        android:background="@drawable/textf"
         android:layout_marginTop="10dp"
-        android:background="@drawable/textfield"
-        android:hint="subject and topic" />
+       android:hint="subject and topic" />
 
     <EditText
         android:id="@+id/comment_"
@@ -53,17 +53,16 @@
         android:layout_height="50dp"
         android:paddingLeft="15dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/textfield"
-
-        android:hint="enter comment here" />
+        android:background="@drawable/textf"
+       android:hint="enter comment here" />
 
     <Button
         android:id="@+id/submit"
-        android:layout_width="234dp"
-        android:layout_height="109dp"
+        android:layout_width="183dp"
+        android:layout_height="43dp"
 
         android:layout_marginTop="30dp"
-        android:background="@drawable/button"
+        android:background="@drawable/buttonview"
         android:onClick="submit"
         android:text="submmit" />
 
